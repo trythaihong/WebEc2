@@ -1,0 +1,74 @@
+﻿
+
+@model List<WebEc2.Models.Category>
+
+@{
+    ViewData["Title"] = "Category Page";
+
+    var category = new WebEc2.Models.Category
+            {
+                CategoryId = 1,
+                CategoryName = "hong",
+                Description = "helllo",
+                IsActive = true
+            };
+
+}
+<p>
+    model
+</p>
+<p>
+    @category.CategoryId
+
+</p>
+<p>
+    @category.CategoryName
+
+</p>
+<p>
+    @category.Description
+
+</p>
+<p>
+    @category.IsActive
+
+</p
+
+
+
+<p>
+    controoller
+</p>
+@foreach(var cate in Model)
+{
+     <p>
+    @cate.CategoryId
+
+</p>
+    <p>
+    @cate.CategoryName
+
+</p>
+<p>
+    @cate.Description
+
+</p>
+<p>
+    @cate.IsActive
+
+</p>
+}
+
+
+
+
+<p>
+    @ViewBag.Data
+</p>
+<p>
+    @ViewBag.Message
+</p>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p style="color:yellow">category page</p>
+</div>

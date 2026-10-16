@@ -1,0 +1,75 @@
+﻿@model Employee
+@{
+    var employee = ViewData["Employee"] as Employee;
+}
+
+<form method="post" asp-action="Store" asp-controller="Employee">
+    <div class="container mt-4">
+        <div class="mb-3">
+            <label for="id" class="form-label">id</label>
+            <input type="number"
+                   class="form-control"
+                   id="id"
+                   asp-for="Id"
+                   
+                   placeholder="Enter first name"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label for="FirstName" class="form-label">First Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="FirstName"
+                   asp-for="FistName"
+                   placeholder="Enter first name"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label for="LastName" class="form-label">Last Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="LastName"
+                   asp-for="LastName"
+                   placeholder="Enter last name"
+                   required />
+        </div>
+        <div class="mb-3">
+            <label for="Gender" class="form-label">Gender</label>
+            <input type="tel"
+                   class="form-control"
+                   id="Gender"
+                   asp-for="Gender"
+                   placeholder="Enter phone number"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Phone" class="form-label">Phone</label>
+            <input type="tel"
+                   class="form-control"
+                   id="Phone"
+                   asp-for="Phone"
+                   placeholder="Enter phone number"
+                   required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Create
+        </button>
+
+        <button type="reset" class="btn btn-secondary">
+            Reset
+        </button>
+    </div>
+</form>
+@{
+}
+<div>
+    <p>id @employee?.Id</p>
+    <p>firstname @employee?.FistName</p>
+    <p>Lastname @employee?.LastName</p>
+    <p>Gender @employee?.Gender</p>
+    <p>phone @employee?.Phone</p>
+</div>
